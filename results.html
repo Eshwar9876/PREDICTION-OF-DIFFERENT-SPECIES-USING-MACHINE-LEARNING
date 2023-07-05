@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .column {
+            float: left;
+            margin: auto;
+            width: 50%;
+            padding: 10px;
+            height: 300px; 
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        body {
+            margin:25px;
+            background-color: #EEE1FD;
+        }
+
+        div.polaroid {
+            align-items: center;
+            width: 50%;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            margin-bottom: 25px;
+            margin: auto;
+        }
+
+        div.container {
+            text-align: center;
+            padding: 10px 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; font-family: 'Lucida Console', 'Courier New', monospace;">RESULTS</h1>
+    <div class="row">
+        <div class="column">
+            <div class="polaroid">
+                <img src="{{ url_for('static', filename='uploads/' + filename) }}" align="center" alt="Uploaded Image" style="width:100%; height: auto;">
+                <div class="container">
+                    <h2>{{x[0]}}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="column" >
+            <h1>Accuracy : {{x[2]}}</h1>
+            <h3>{{x[1]}}</h3>
+        </div>
+    </div>
+
+</body>
+</html>

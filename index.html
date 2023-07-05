@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+                background-image: url('../static/bg1.jpg');
+                margin: 0;
+                font-family: Arial;
+                font-size: 17px;
+            }
+            .headin {
+                text-align: center;
+                color: black;
+                font-family: "Lucida Console", "Courier New", monospace;
+            }
+
+            .video {
+                position: fixed;
+                margin: 0;
+                right: 0;
+                bottom: 0;
+                min-width: 100%;
+                min-height: 100%;
+                z-index: -1;
+            }
+            .content {
+                position: fixed;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+                color: #f1f1f1;
+                width: 100%;
+                padding: 20px;
+            }
+
+        </style>
+        <title>Explore Us</title>
+    </head>
+    <body>
+        <h1 class="headin">PREDICTION OF DIFFERENT SPECIES</h1>
+        <video autoplay muted loop plays-inline class="myVideo"> 
+            <source src="../static/fish.mp4" type="video/mp4">
+            Browser does not support the video tag.
+        </video>
+        <div class="content">
+            <h1>Welcome to our world</h1>
+            <form method="POST" enctype="multipart/form-data">
+                <input type="file" name="file">
+                <input type="submit" value="Upload">
+            </form>
+        </div>
+    </body>
+</html>
+
+
